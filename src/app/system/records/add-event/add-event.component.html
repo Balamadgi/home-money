@@ -1,0 +1,70 @@
+<div class="card">
+  <div class="card-header bordered">
+    <div class="header-block">
+      <h3 class="title">Добавить событие</h3>
+    </div>
+  </div>
+  <div class="alert alert-danger" *ngIf="massegeEventDanger">{{massegeEventDanger}}</div>
+  <div class="alert alert-success" *ngIf="massegeEventSuccess">{{massegeEventSuccess}}</div>
+
+  <div class="card-block">
+    <form [formGroup]="form" (submit)="onSubmit()">
+      <div class="form-group"
+           [ngClass]="{'has-error':form.get('idOfCategory').touched && form.get('idOfCategory').invalid}">
+        <label class="control-label" for="category">Выберите категорию</label>
+        <select class="form-control"
+                id="category"
+                formControlName="idOfCategory">
+          <option
+            *ngFor="let c of categories" [value]="c.name"
+          >{{c.name}}
+          </option>
+        </select>
+        <span class="form-help-text"
+              *ngIf="form.get('idOfCategory').touched && form.get('idOfCategory').value == '' ">Виберите категорию</span>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Выберите тип</label>
+        <div *ngFor="let t of types">
+          <label>
+            <input class="radio"
+                   name="typeOfEvent"
+                   formControlName="typeOfEvent"
+                   type="radio"
+                   [value]="t.type"
+            >
+            <span>
+              {{t.label}}</span>
+          </label>
+        </div>
+
+      </div>
+      <div class="form-group"
+           [ngClass]="{'has-error': +(form.get('amount').value)<1 && form.get('amount').touched}">
+        <label class="control-label" for="amount">Введите сумму</label>
+        <input type="number"
+               value="0"
+               id="amount"
+               class="form-control"
+               formControlName="amount">
+        <span *ngIf="form.get('amount').touched">
+          <span class="form-help-text"
+                *ngIf="+(form.get('amount').value) < 1">Лимит должен быть больше 1</span>
+        </span>
+      </div>
+      <div class="form-group"
+           [ngClass]="{'has-error':form.get('description').value == '' && form.get('description').touched} ">
+        <label class="control-label">Введите описание</label>
+        <input type="text"
+               id="edit-category-name"
+               class="form-control"
+               formControlName="description">
+        <span class="form-help-text"
+              *ngIf="form.get('description').value == '' && form.get('description').touched">Данное поле необходимо заполнить</span>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Добавить</button>
+    </form>
+  </div>
+</div>

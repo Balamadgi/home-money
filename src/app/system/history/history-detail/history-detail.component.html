@@ -1,0 +1,40 @@
+<div *ngIf="!isLoaded">
+	Loading...
+</div>
+<div *ngIf="isLoaded">
+	<div class="title-block">
+		<h3 class="title">
+			<a [routerLink]="['/system/history']"><i class="fa fa-arrow-left"></i></a>
+			Страница записи № {{event.id}}
+			<span class="sparkline bar"></span>
+		</h3>
+	</div>
+	<section class="section">
+		<div class="row">
+			<div class="col-xs-6 col-xs-offset-3">
+				<div class="card" [ngClass]="{
+									'card-danger': event.typeOfEvent === 'outcome',
+									'card-success': event.typeOfEvent === 'income'}		
+							">
+					<div class="card-header">
+						<div class="header-block">
+							<p class="title">
+								<span *ngIf="event.typeOfEvent === 'income'">Доход</span>
+								<span *ngIf="event.typeOfEvent === 'outcome'">Расход</span>
+							</p>
+						</div>
+					</div>
+					<div class="card-block">
+						<ul>
+							<li>Сумма: <strong>{{event.amount}} ₴</strong></li>
+							<li>Категория: <strong>{{category.name}}</strong></li>
+							<li>Информация: <strong>{{event.description}}</strong></li>
+						</ul>
+					</div>
+					<div class="card-footer">{{event.date | date: 'dd.MM.yyyy'}}</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>

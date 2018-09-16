@@ -1,0 +1,31 @@
+
+.brand-open-sidebar{
+	position: relative;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.fa-angle-double-left {
+	float: right;
+	cursor: pointer;
+	position: absolute;
+	left: 180px;
+	top: -5px;
+}
+
+@media (min-width:991px) {
+	.brand-open-sidebar {
+		left: -400px;
+	}
+
+	.fa-angle-double-left {
+		left: -400px;
+	}
+}
+
+@media (max-width:991px) {
+.sidebar.open-sidebar{
+	left: 0;
+	opacity: 0.9;
+}
+}

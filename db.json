@@ -1,0 +1,137 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "myf@i.ua",
+      "password": "1234567",
+      "name": "Администратор"
+    },
+    {
+      "email": "Demjin6@gmail.com",
+      "password": "123456789",
+      "name": "Дима",
+      "id": 2
+    }
+  ],
+  "bill": {
+    "value": 7000,
+    "currency": "UAH"
+  },
+  "categories": [
+    {
+      "name": "Дом",
+      "capacity": 15000,
+      "id": 1
+    },
+    {
+      "name": "Еда",
+      "capacity": 1000,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Машина",
+      "capacity": 7000
+    },
+    {
+      "name": "Новая",
+      "capacity": 15000,
+      "id": 4
+    },
+    {
+      "name": "ff",
+      "capacity": 5000,
+      "id": 5
+    }
+  ],
+  "events": [
+    {
+      "idOfCategory": 1,
+      "typeOfEvent": "income",
+      "amount": 1000,
+      "date": "2018-09-08T12:45:53.668Z",
+      "description": "ккк",
+      "id": 1
+    },
+    {
+      "idOfCategory": 1,
+      "typeOfEvent": "outcome",
+      "amount": 5000,
+      "date": "2018-09-08T12:45:53.668Z",
+      "description": "уууу",
+      "id": 2
+    },
+    {
+      "idOfCategory": 2,
+      "typeOfEvent": "outcome",
+      "amount": 500,
+      "date": "2018-09-08T12:45:53.668Z",
+      "description": "вв",
+      "id": 3
+    },
+    {
+      "idOfCategory": 3,
+      "typeOfEvent": "income",
+      "amount": 10000,
+      "date": "2018-09-08T12:47:37.865Z",
+      "description": "а",
+      "id": 4
+    },
+    {
+      "idOfCategory": 3,
+      "typeOfEvent": "outcome",
+      "amount": 5000,
+      "date": "2018-09-08T12:48:04.736Z",
+      "description": "юбб",
+      "id": 5
+    },
+    {
+      "idOfCategory": 4,
+      "typeOfEvent": "income",
+      "amount": 4000,
+      "date": "2018-09-08T12:49:11.090Z",
+      "description": "ььь",
+      "id": 6
+    },
+    {
+      "idOfCategory": 4,
+      "typeOfEvent": "outcome",
+      "amount": 7000,
+      "date": "2018-09-08T12:49:11.090Z",
+      "description": "ььь",
+      "id": 7
+    },
+    {
+      "idOfCategory": 3,
+      "typeOfEvent": "income",
+      "amount": 1000,
+      "date": "2018-09-14T09:24:34.702Z",
+      "description": "GFH",
+      "id": 8
+    },
+    {
+      "idOfCategory": 1,
+      "typeOfEvent": "outcome",
+      "amount": 1000,
+      "date": "2018-09-15T21:55:37.881Z",
+      "description": "eee",
+      "id": 9
+    },
+    {
+      "idOfCategory": 5,
+      "typeOfEvent": "income",
+      "amount": 5000,
+      "date": "2018-09-15T23:24:19.652Z",
+      "description": "lll",
+      "id": 10
+    },
+    {
+      "idOfCategory": 5,
+      "typeOfEvent": "outcome",
+      "amount": 2000,
+      "date": "2018-09-15T23:24:19.652Z",
+      "description": "lll",
+      "id": 11
+    }
+  ]
+}
