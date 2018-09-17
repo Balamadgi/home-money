@@ -5,7 +5,7 @@ import {map} from 'rxjs/internal/operators';
 
 @Injectable()
 export class BaseApi {
-  private baseUrl = 'http://91.231.85.136:3000/';
+  private baseUrl = 'http://localhost:3000/';
 
   constructor(public http: Http) {
   }
