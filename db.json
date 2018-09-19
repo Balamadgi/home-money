@@ -5,10 +5,22 @@
       "email": "myf@i.ua",
       "password": "1234567",
       "name": "Администратор"
+    },
+    {
+      "email": "myf@ir.ua",
+      "password": "123456789",
+      "name": "Fff",
+      "id": 2
+    },
+    {
+      "email": "i@i.ua",
+      "password": "123456789",
+      "name": "r",
+      "id": 3
     }
   ],
   "bill": {
-    "value": 6000,
+    "value": 5700,
     "currency": "UAH"
   },
   "categories": [
@@ -60,6 +72,14 @@
       "date": "2018-09-17T16:56:37.500Z",
       "description": "Замена колодок",
       "id": 4
+    },
+    {
+      "idOfCategory": 2,
+      "typeOfEvent": "outcome",
+      "amount": 300,
+      "date": "2018-09-17T17:43:59.632Z",
+      "description": "мак",
+      "id": 5
     }
   ]
 }

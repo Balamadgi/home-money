@@ -1,6 +1,6 @@
 # HomeMoney
 
-It's one of the more simple budget apps.
+It's one of the simple budget apps.
 You'll get expense tracking, income tracking, and some other decent budgeting tools.
 
 ## Quick Start
